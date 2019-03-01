@@ -43,6 +43,10 @@ public class BankAccountClient {
         }
         System.out.println("\n\n" + savingsAccount.toString());
 
+        //This segment allows the user to input the data necessary for a savings account,
+        //and then creates one for them. Afterwords, 10 dollars is withdrawn as an "opening fee"
+        //--------------------------------------------------------------------------------------
+        
         CheckingAccount checkingAccount = new CheckingAccount();
 
         System.out.println("\n\n\nChange the information for your checking account (old password is 'password' by default)");
@@ -76,7 +80,11 @@ public class BankAccountClient {
             System.out.print(e.getMessage());
         }
         System.out.println("\n" + checkingAccount.toString());
-
+        
+        //This segment creates a genaric checking account and lets the user change the genaric values
+        //to their own.
+        //-------------------------------------------------------------------------------------------
+       
         System.out.print("Now lets make a mortgage!\nEnter your accounts ID: ");
         try{username = in.nextLine();}
         catch(Exception e){
@@ -133,3 +141,6 @@ public class BankAccountClient {
         System.out.println(mortgageAccount.toString());
     }
 }
+//This segment prompts the user for all necessary information for a mortgage account. Then, the program determines if the
+//down payment is sufficient, followed by emulating a "monthly payment".
+//-----------------------------------------------------------------------------------------------------------------------
